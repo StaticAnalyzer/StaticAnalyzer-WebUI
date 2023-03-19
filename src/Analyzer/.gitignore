@@ -1,2 +1,6 @@
 cmake-build-debug/
 build/
+
+example.ast
+time.txt
+outTest.dot
