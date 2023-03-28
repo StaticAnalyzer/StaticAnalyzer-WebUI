@@ -7,22 +7,20 @@
 
 ## How to compile
 
-There are two approaches to compile TemplateChecker:
+You need to install llvm first. Check if you've install it successfully by
 
-1. If you built LLVM and installed it, you should specify variable LLVM_PREFIX which represents the path to your LLVM install directory;
-2. If you built LLVM but did not install it, you should specify variable LLVM_BUILD which represents the path to your LLVM build directory.
+```shell
+llvm-config --version
+```
 
-We recommend the first approach.
+Compile project:
 
 ```shell
 $ git clone https://git.nju.edu.cn/CAIy/se-experiment
 $ cd SE-Experiment
 $ mkdir cmake-build-debug
 $ cd cmake-build-debug
-# use LLVM install directory
-$ cmake -G Ninja -DLLVM_PREFIX=${LLVM_PREFIX} ..
-# use LLVM build directory
-$ cmake -G Ninja -DLLVM_BUILD=${LLVM_BUILD} ..
+$ cmake -G Ninja ..
 $ ninja
 ```
 
