@@ -1,0 +1,9 @@
+[submodule "src/Frontend"]
+	path = src/Frontend
+	url = https://github.com/StaticAnalyzer/StaticAnalyzer-Frontend.git
+[submodule "src/Backend"]
+	path = src/Backend
+	url = https://github.com/StaticAnalyzer/StaticAnalyzer-Backend.git
+[submodule "src/Algorithm"]
+	path = src/Algorithm
+	url = https://github.com/StaticAnalyzer/StaticAnalyzer-Algorithm.git
