@@ -14,6 +14,7 @@ CREATE TABLE project (
     id INT NOT NULL AUTO_INCREMENT,
     user_id INT NOT NULL,
     source_code MEDIUMBLOB NOT NULL,
+    config TEXT NOT NULL,
     analyse_result MEDIUMTEXT,
     PRIMARY KEY (id),
     FOREIGN KEY (user_id) REFERENCES user(id)
