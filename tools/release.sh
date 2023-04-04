@@ -1,5 +1,37 @@
 #!/bin/bash
-echo "Build start"
 
-echo "Copy Changelog"
-cp ./CHANGELOG.md ./release/CHANGELOG.md
+echo "Building..."
+echo "Build Backend..."
+pushd src/Backend
+mvn clean package
+popd
+
+echo "Build Frontend..."
+pushd src/Frontend
+npm run build
+popd
+
+echo "Build Algorithm..."
+pushd src/Algorithm
+rm -rf build/
+mkdir build/
+cd build/
+cmake -G Ninja -DCMAKE_BUILD_TYPE=Release ..
+ninja
+popd
+
+echo "Copying files..."
+rm -rf release/
+mkdir -p release/
+cp -r src/MySQL/ release/mysql/
+cp -r Nginx/ release/nginx/
+mkdir -p release/backend/
+cp src/Backend/target/staticanalyzer*.jar release/backend/staticanalyzer.jar
+cp src/Backend/dockerfile release/backend/dockerfile
+cp -r src/Frontend/dist release/nginx/dist
+cp src/Algorithm/dockerfile release/algorithm/dockerfile
+cp src/Algorithm/build/tools/gRPCServer/algServer release/algorithm/algServer
+cp src/docker-compose.yml release/docker-compose.yml
+
+echo "Tar..."
+tar -zcvf staticanalyzer.tar.gz release/
