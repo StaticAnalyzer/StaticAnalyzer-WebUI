@@ -3,8 +3,8 @@
 echo "Building..."
 echo "Build Backend..."
 pushd src/Backend
-mvn clean 
-mvn package -DskipTests
+./mvnw clean 
+./mvnw package -DskipTests
 popd
 
 echo "Build Frontend..."
