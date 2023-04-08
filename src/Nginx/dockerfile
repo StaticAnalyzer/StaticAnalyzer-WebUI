@@ -1,5 +1,6 @@
 FROM nginx:latest
 
 COPY config/default.conf /etc/nginx/conf.d/
+COPY dist /usr/local/frontend/dist
 
 EXPOSE 80 443

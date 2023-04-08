@@ -1,6 +1,6 @@
 FROM mysql:latest
 
-ENV MYSQL_ROOT_PASSWORD=Root@StaticAnalyzer@Password
+ENV MYSQL_ROOT_PASSWORD=Root@Project@Password
 ENV MYSQL_DATABASE=staticanalyzerdb
 
 COPY init.sql /docker-entrypoint-initdb.d/

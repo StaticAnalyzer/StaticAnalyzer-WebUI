@@ -4,3 +4,4 @@ __pycache__
 
 release/
 .DS_Store
+staticanalyzer.tar.gz
