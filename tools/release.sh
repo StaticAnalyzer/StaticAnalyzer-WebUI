@@ -34,7 +34,7 @@ cp -r src/Frontend/dist release/nginx/dist
 mkdir -p release/algorithm/
 cp src/Algorithm/dockerfile release/algorithm/dockerfile
 cp src/Algorithm/build/tools/gRPCServer/algServer release/algorithm/algServer
-cp src/dockercompose.yml release/dockercompose.yml
+cp src/docker-compose.yaml release/docker-compose.yaml
 
 echo "Tar..."
 tar -zcvf staticanalyzer.tar.gz release/
