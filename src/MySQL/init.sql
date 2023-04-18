@@ -13,6 +13,7 @@ CREATE TABLE user (
 CREATE TABLE project (
     id INT NOT NULL AUTO_INCREMENT,
     user_id INT NOT NULL,
+    timestamp TIMESTAMP NOT NULL,
     source_code MEDIUMBLOB NOT NULL,
     config TEXT NOT NULL,
     analyse_result MEDIUMTEXT,
