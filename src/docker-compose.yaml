@@ -15,4 +15,7 @@ services:
   algorithm:
     build: ./algorithm/
     restart: always
+  redis:
+    build: ./redis/
+    restart: always
   

@@ -27,6 +27,7 @@ rm -rf release/
 mkdir -p release/
 cp -r src/MySQL/ release/mysql/
 cp -r src/Nginx/ release/nginx/
+cp -r src/Redis/ release/redis/
 mkdir -p release/backend/
 cp src/Backend/target/staticanalyzer*.jar release/backend/staticanalyzer.jar
 cp src/Backend/dockerfile release/backend/dockerfile
