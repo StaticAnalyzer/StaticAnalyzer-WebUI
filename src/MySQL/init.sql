@@ -13,7 +13,7 @@ CREATE TABLE user (
 CREATE TABLE project (
     id INT NOT NULL AUTO_INCREMENT,
     user_id INT NOT NULL,
-    timestamp TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP  ,
+    timestamp TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     source_code MEDIUMBLOB NOT NULL,
     config TEXT NOT NULL,
     analyse_result MEDIUMTEXT,
@@ -23,3 +23,8 @@ CREATE TABLE project (
 
 INSERT INTO user (username, password) VALUES 
     ('lambdale', 'lambdale@staticanalyzer');
+
+INSERT INTO project (user_id, source_code, config) VALUES
+    ((SELECT id FROM user WHERE username='lambdale'),
+     'main(){puts("helloworld!");}',
+     '<algorithm>test</algorithm>');
