@@ -1,5 +1,5 @@
-v2.0.0
-General fcbc469
-Backend 6a36f2f
-Frontend 23063d0
-Algorithm 52893e8
+v2.1.0
+General 8c7d6de
+Backend e1b0b8a
+Frontend bb79746
+Algorithm 207fbd8
