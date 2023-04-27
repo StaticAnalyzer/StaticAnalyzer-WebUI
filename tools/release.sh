@@ -3,6 +3,7 @@
 echo "Building..."
 echo "Build Backend..."
 pushd src/Backend
+chmod +x mvnw
 ./mvnw clean 
 ./mvnw package -DskipTests
 popd
