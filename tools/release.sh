@@ -26,6 +26,7 @@ popd
 echo "Copying files..."
 rm -rf release/
 mkdir -p release/
+cp Readme.md release/Readme.md
 cp -r src/MySQL/ release/mysql/
 cp -r src/Nginx/ release/nginx/
 cp -r src/Redis/ release/redis/
