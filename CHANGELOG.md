@@ -1,3 +1,56 @@
+# v2.1.0 (2023-04-27)
+## General
+### Bug Fixes
+### Features
+* docker引入redis(dfdfe9d)
+* 添加自动化生成Changelog脚本(688ec64)
+## Backend
+### Bug Fixes
+* 修复目录处理相关空指针问题(70fb867)
+* 修复了算法错误时继续分析的问题(70f9807)
+* 修复了timestamp和analyseBrief为空的问题(963a162)
+* 修复时间戳不存入数据库问题(e183f1a)
+* 修复ProjectVO反序列化失败、gRPC服务器连接失败问题(f62bc52)
+* 修复了缓存中返回空映射仍然命中的问题(6c677f7)
+* 修复了DirectoryEntry的名称问题(6b596a3)
+* 修复了redis无法序列化protobuf类的问题、目录结构不准确的问题(363893a)
+* 修复了用户模块的问题(2274d82)
+* 修复数据库用户名密码匹配错误(1f2b73b)
+* 修复protobuf协议缺少一层list的问题(f451f23)
+### Features
+* 添加新的项目缓存，提升效率(86c582a)
+* 添加用户相关的服务异常以及异常处理(a0b8525)
+* 优化了分析文件的生成(2a260f1)
+* 完善了项目相关的POJO(c227db0)
+* 完善了project服务(73046f2)
+* 完善VO之间的相互转换(9c90729)
+* 完善了Directory的转换(69fd062)
+* 统一管理user配置(dddf737)
+* 重建引入protobuf类后的类结构(9430469)
+* 新增协议类并分层(c244714)
+* 引入redis功能(ac38dfc)
+* 添加targz解压方法与文件类目录类等(e1ce110)
+## Frontend
+### Bug Fixes
+* 修复目录字典遍历方式错误(6490707)
+* 调整api适配(7c8a8ae)
+* 添加mockjs依赖(bbcb75c)
+* 用户分析结果页面适配4-12日新协议api(06fa9a5)
+### Features
+* 添加目录树组件，完善结果查询详情页面(57d29c7)
+* 添加Monaco Editor代码展示组件(1c7c15b)
+## Algorithm
+### Bug Fixes
+* 修复ResultUnit赋值重载缺少*this问题(207fbd8)
+* 修复算法结果中code错误、文件名包含多余前后缀等问题(28667c2)
+* grpc 修复返回的文件名包含临时目录问题(1008199)
+* fix a typo and refactor api(c70b861)
+* delete unused fields(630a50d)
+* 缩小镜像大小(c844ad1)
+### Features
+* 将grpc通信内容从json改为明确的结构体(bf8e098)
+* polish analysis result(d0551d2)
+* 添加未初始化变量简单分析(82cd642)
 # v2.0.0 (2023-04-08)
 
 第一个可运行版🎉🎉
