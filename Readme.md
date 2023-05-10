@@ -31,6 +31,9 @@
 解压`staticanalyzer.tar.gz`，在目录中执行
 
 ```shell
+# 如果之前启动过旧版本，最好重新构建
+docker-compose build --no-cache
+# 启动项目
 docker-compose up
 ```
 
@@ -41,3 +44,4 @@ docker-compose up
    1. 注册用户并登陆
    2. 在首页上传`.tar.gz`代码压缩包（头文件搜索方式：默认位置或根目录下`include`目录）
    3. 跳转到结果列表界面，刷新界面等待状态变为`Complete`，点击左侧可以展开分析摘要，点击条目进入具体信息
+3. 即时测试：无需登录，默认进行所有可用类别的测试
