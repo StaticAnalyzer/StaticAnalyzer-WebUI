@@ -1,3 +1,18 @@
+# v2.2.0 (2023-05-10)
+## General
+### Bug Fixes
+### Features
+## Backend
+### Bug Fixes
+* 修复单文件测试没有错误时的报错问题(9b5761d)
+### Features
+* 添加了单文件分析功能，并修复了多个算法结果列表无法整合的问题(c0402cb)
+* 添加即时测试接口(65d8aad)
+## Frontend
+### Bug Fixes
+### Features
+* 添加即时测试功能(78c4f89)
+## Algorithm
 # v2.1.0 (2023-04-27)
 ## General
 ### Bug Fixes

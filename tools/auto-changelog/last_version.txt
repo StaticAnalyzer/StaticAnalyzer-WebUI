@@ -1,5 +1,5 @@
-v2.1.0
-General 8c7d6de
-Backend e1b0b8a
-Frontend bb79746
+v2.2.0
+General 48d3dd0
+Backend 67a5953
+Frontend 78c4f89
 Algorithm 207fbd8
