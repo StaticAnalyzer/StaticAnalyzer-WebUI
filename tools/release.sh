@@ -21,6 +21,10 @@ mkdir build/
 cd build/
 cmake -G Ninja -DCMAKE_BUILD_TYPE=Release ..
 ninja
+cd tools/gRPCServer/
+mkdir deps/
+deplist=$(ldd algServer | awk  '{if (match($3,"/")){ printf("%s "),$3 } }')
+cp $deplist deps/
 popd
 
 echo "Copying files..."
@@ -37,6 +41,7 @@ cp -r src/Frontend/dist release/nginx/dist
 mkdir -p release/algorithm/
 cp src/Algorithm/dockerfile release/algorithm/dockerfile
 cp src/Algorithm/build/tools/gRPCServer/algServer release/algorithm/algServer
+cp src/Algorithm/build/tools/gRPCServer/deps/* release/algorithm/dpes/
 cp src/docker-compose.yaml release/docker-compose.yaml
 
 echo "Tar..."
