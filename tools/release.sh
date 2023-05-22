@@ -38,10 +38,10 @@ mkdir -p release/backend/
 cp src/Backend/target/staticanalyzer*.jar release/backend/staticanalyzer.jar
 cp src/Backend/dockerfile release/backend/dockerfile
 cp -r src/Frontend/dist release/nginx/dist
-mkdir -p release/algorithm/
+mkdir -p release/algorithm/deps/
 cp src/Algorithm/dockerfile release/algorithm/dockerfile
 cp src/Algorithm/build/tools/gRPCServer/algServer release/algorithm/algServer
-cp src/Algorithm/build/tools/gRPCServer/deps/* release/algorithm/dpes/
+cp src/Algorithm/build/tools/gRPCServer/deps/* release/algorithm/deps/
 cp src/docker-compose.yaml release/docker-compose.yaml
 
 echo "Tar..."
