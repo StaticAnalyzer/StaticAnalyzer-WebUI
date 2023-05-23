@@ -1,3 +1,21 @@
+# v2.3.0 (2023-05-23)
+## General
+### Bug Fixes
+* 修复release.sh新算法框架适配(0218611)
+### Features
+## Backend
+## Frontend
+### Bug Fixes
+* 适配新算法框架config协议(66fea97)
+### Features
+## Algorithm
+### Bug Fixes
+* 修复2^x*x表达式识别错误问题(5e77e15)
+* 将ReachingDefinationAnalysis修改为UseBeforeDefAnalysismit(78f7f14)
+* update submodule to resolve compile error(8a858fa)
+### Features
+* 添加四则运算强度削减分析(d1224e6)
+* 添加基于新框架数据流分析的未初始化变量分析mit(d763b73)
 # v2.2.0 (2023-05-10)
 ## General
 ### Bug Fixes
