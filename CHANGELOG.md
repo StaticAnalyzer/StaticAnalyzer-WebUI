@@ -1,3 +1,34 @@
+# v2.4.0 (2023-06-06)
+## General
+### Bug Fixes
+### Features
+## Backend
+### Bug Fixes
+* 修复redis缓存无法反序列化、api字段问题(f382e31)
+### Features
+* 加入问题报告(accb42b)
+* 引入了新的targz功能(51d765b)
+## Frontend
+### Bug Fixes
+* 修复全局多余的纵向滚动条(8f6f03d)
+### Features
+* 添加problem list展示组件(4b25610)
+## Algorithm
+### Bug Fixes
+* fix an NDP in libanalyzer(1a4b553)
+* 修复数组越界分析忽略init_expr以及代码风格(2184ef5)
+* disable implicit cast of AnalysisFactory(535793a)
+* fix a bug in libanalyzer(38333e6)
+### Features
+* add support for compile arguments(009444c)
+* 添加除零分析与数组越界分析(b86277d)
+* add new features in constant propagation(7fd0276)
+* 添加NullPointerDereferenceAnalysis(88c8844)
+* add constant propagation analysis(dabe0c6)
+* 添加内存泄漏分析(9ad7cbc)
+* 添加基于活跃变量分析的死代码消除(0e7ec62)
+* add command line interface for live variable analysis(cc3756e)
+* add live variable analysis in the framework(3d526d9)
 # v2.3.0 (2023-05-23)
 ## General
 ### Bug Fixes
