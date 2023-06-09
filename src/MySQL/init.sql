@@ -14,7 +14,7 @@ CREATE TABLE project (
     id INT NOT NULL AUTO_INCREMENT,
     user_id INT NOT NULL,
     timestamp TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    source_code MEDIUMBLOB NOT NULL,
+    source_code LONGBLOB NOT NULL,
     config TEXT NOT NULL,
     analyse_result MEDIUMTEXT,
     PRIMARY KEY (id),
