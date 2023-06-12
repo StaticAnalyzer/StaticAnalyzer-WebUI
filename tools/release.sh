@@ -39,9 +39,11 @@ cp src/Backend/target/staticanalyzer*[!c].jar release/backend/staticanalyzer.jar
 cp src/Backend/dockerfile release/backend/dockerfile
 cp -r src/Frontend/dist release/nginx/dist
 mkdir -p release/algorithm/deps/
+mkdir -p release/algorithm/include/
 cp src/Algorithm/dockerfile release/algorithm/dockerfile
 cp src/Algorithm/build/tools/gRPCServer/algServer release/algorithm/algServer
 cp src/Algorithm/build/tools/gRPCServer/deps/* release/algorithm/deps/
+cp -r /usr/lib/llvm-17/lib/clang/17/include/* release/algorithm/include
 cp src/docker-compose.yaml release/docker-compose.yaml
 
 echo "Tar..."
