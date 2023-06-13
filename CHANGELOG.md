@@ -1,3 +1,47 @@
+# v3.0.0 (2023-06-13)
+## General
+### Bug Fixes
+* 修复压缩包大于1M时无法上传的问题(dc4f7c7)
+### Features
+## Backend
+### Bug Fixes
+* 解决了无法从Queueing变化为Completed的问题(2f33c62)
+* 真的修复了Queueing时无法读取的问题(569bad5)
+* 修复了遇到不匹配文件时出现空指针的问题(e237421)
+* 修复了缓存无法读到Queueing状态的问题(5fa6fbd)
+* 修复了无法完全读取超长源文件的问题(c96058d)
+### Features
+* 向分析问题汇报中添加了算法类型字段(491d424)
+## Frontend
+### Bug Fixes
+### Features
+* 添加分析类型筛选，添加抽屉式报错列表(38d7a32)
+* 上传页支持配置std, includeDir, defineMacro参数(91a2877)
+## Algorithm
+### Bug Fixes
+* 修复MemoryLeakAnalysis对*x=new等语句sigfault问题(ab67b81)
+* 修复config为空时报错问题(6fc21ea)
+* 修复server运行时标准库头文件报错(b6fb3db)
+* 修复server返回结果中有空文件名的问题(cbcda54)
+* 修复tryZExtValue相关assert报错(054524a)
+* fix a bug about parenthesis around a single variable(2449b9a)
+* 修复子表达式导致的false positive(5cdf34c)
+* 修复DeadCodeElimination中静态变量误报问题(05eb64e)
+* 修复DeadCodeEliminationAnalysis全局变量误报、空报告问题(c01a02b)
+* 修复dead var分析重复报告问题(15b458e)
+* fix improper processing of unary operator(7296369)
+* 减少冗余的四则运算强度消解提示(a48c550)
+* 修复UseBeforeDef分析对全局变量的误报(709bfc7)
+* 修复cliAnalyzer -O选项不生效(27857ac)
+* fix crash of constant propagation on cpython(a574d0c)
+* 修复getDirectCallee相关空指针错误(70b3f1a)
+* 修复getExtValue()assert报错(e871875)
+### Features
+* server新增分析请求配置std, includeDirs, defMacros(2e98eba)
+* cliAnalyzer添加自定义args参数(f17f93e)
+* 添加控制台staticanalyzer工具(d2b7c9e)
+* add command line interface for constant propagation(24e4076)
+* add support and filter for system standard lib(55ca1e3)
 # v2.4.0 (2023-06-06)
 ## General
 ### Bug Fixes
