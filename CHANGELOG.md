@@ -1,3 +1,20 @@
+# v3.1.0 (2023-06-29)
+## General
+### Bug Fixes
+### Features
+## Backend
+### Bug Fixes
+### Features
+## Frontend
+### Bug Fixes
+* 修复用户信息更新获取失败问题(c13cae9)
+### Features
+## Algorithm
+### Bug Fixes
+* 修复空指针解引用部分子语句遍历不到的问题(9d833f8)
+* 修复空指针解引用分析检查不到->运算符的问题(1b9bdf2)
+### Features
+* 添加除零检测对与0与同变量异或的支持, 提高精度(c5a7c29)
 # v3.0.0 (2023-06-13)
 ## General
 ### Bug Fixes
