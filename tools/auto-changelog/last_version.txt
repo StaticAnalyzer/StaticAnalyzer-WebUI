@@ -1,5 +1,5 @@
-v3.0.0
-General 62b0978
-Backend 2f33c62
-Frontend 26e9dff
-Algorithm ab67b81
+v3.1.0
+General f70af64
+Backend 7b1f182
+Frontend c13cae9
+Algorithm c5a7c29
